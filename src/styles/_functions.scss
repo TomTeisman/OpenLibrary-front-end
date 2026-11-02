@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use './variables' as variables;
+
+/**
+ * Retrieve a color from the variables on a user friendly way
+ *
+ * @param  $type  the type of color to retrieve
+ * @param  $name  the name of the color to retrieve
+ */
+@function color($type, $name) {
+    $palette: map.get(variables.$colors, $type);
+    
+    @if $palette == null {
+        @error "Unknown color category '#{$type}'.";
+    }
+    
+    $value: map.get($palette, $name);
+    
+    @if $value == null {
+        @error "Unknown color '#{$name}' in category '#{$type}'.";
+    }
+    
+    @return $value;
+}

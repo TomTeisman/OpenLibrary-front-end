@@ -1,0 +1,27 @@
+@use "../../../styles/variables" as variables;
+
+.base {
+    --font-style: normal;
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    font-style: var(--font-style);
+    text-transform: var(--text-transform);
+}
+
+// font families
+.ff__inter { --font-family: #{variables.$ff-inter}; --font-weight: #{variables.$fw-regular}; }
+.ff__cormorant_garamond { --font-family: #{variables.$ff-cormorant-garamond}; --font-weight: #{variables.$fw-semi-bold}; }
+
+// font sizes
+.fsz__body { --font-size: #{variables.$fs-body}; }
+.fsz__small { --font-size: #{variables.$fs-small}; }
+
+// font styles
+.fst__italic { --font-style: italic; }
+
+// transforms
+.tr__none { --text-transform: none; }
+.tr__uppercase { --text-transform: uppercase; }
+.tr__lowercase { --text-transform: lowercase; }

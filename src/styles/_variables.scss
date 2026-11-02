@@ -1,0 +1,43 @@
+// colors
+$colors: (
+    neutral: (
+        white: #ffffff,
+        background: #f4efe5,
+        background-light: #fbf8f1,
+        stroke: #d9d0c2,
+        paragraph: #6f6a61,
+        heading: #292722
+    ),
+    accent: (
+        red: #a43d2f,
+        red-light: #ead2c8,
+        red-background: #f5e5e1,
+        green: #667052,
+        green-light: #dde0cf,
+        yellow: #b98a47,
+        yellow-light: #efe1c8,
+        yellow-dimmed: #7a5b2c
+    )
+);
+
+// font
+// font families
+$ff-inter: 'Inter';
+$ff-cormorant-garamond: 'Cormorant Garamond';
+
+// font weights
+$fw-semi-bold: 600;
+$fw-regular: 400;
+
+// font sizes
+$fs-display-large: 2rem;
+$fs-display-medium: 1.6rem;
+$fs-display-small: 1.2rem;
+$fs-body: 0.875rem;
+$fs-small: 0.7rem;
+
+// breakpoints
+$phone: 375px;
+$tablet: 768px;
+$laptop: 1440px;
+$hd: 1920px;

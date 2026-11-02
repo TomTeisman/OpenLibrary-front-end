@@ -1,4 +1,4 @@
-import type { ReactElement } from "react"
+import type { ReactElement } from 'react';
 
 type SectionProps = {
     children: ReactElement[];
@@ -9,7 +9,7 @@ function Section({children}: SectionProps) {
         <section>
             {children}
         </section>
-    )
+    );
 }
 
 export default Section;

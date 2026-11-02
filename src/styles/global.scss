@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use './functions' as functions;
+@use './variables' as variables;
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../assets/fonts/CormorantGaramond/CormorantGaramond-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    src: url('../assets/fonts/CormorantGaramond/CormorantGaramond-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: italic;
+    src: url('../assets/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+
+    @media (min-width: variables.$hd) {
+        font-size: calc((16 / variables.$hd) * 100vw);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: functions.color('neutral', 'background');
+}
