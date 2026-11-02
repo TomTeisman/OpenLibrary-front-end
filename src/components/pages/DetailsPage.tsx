@@ -3,6 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import Text from '../elements/Text/Text';
 import type { Work } from '../../types/Work';
 import Section from '../elements/Section/Section';
+import Heading from '../elements/Heading/Heading';
 
 function DetailsPage() {
     const { id } = useParams();
@@ -14,8 +15,8 @@ function DetailsPage() {
 
     return (
         <Section>
-            <Text as="p">{data.title}</Text>
-            <Text as="p">{data.description}</Text>
+            <Heading as="h1" size="display-large">{data.title ?? 'No title found'}</Heading>
+            <Text as="p">{data.description ?? 'No description found'}</Text>
         </Section>
     );
 }

@@ -12,7 +12,7 @@ type HeadingProps = {
 function Heading({ as = 'h3', size = 'display-small', weight = 'semi-bold', fontFamily = 'Cormorant Garamond', children }: HeadingProps) {
     const Comp = as;
     const fontFam = fontFamily.replace(' ', '_').toLowerCase();
-    
+
     return (
         <Comp className={clsx(styles.base, styles[`fs__${size}`], styles[`fw__${weight}`], styles[`ff__${fontFam}`])}>
             {children}
