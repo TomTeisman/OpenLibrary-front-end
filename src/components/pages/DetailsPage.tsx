@@ -15,8 +15,8 @@ function DetailsPage() {
 
     return (
         <Section>
-            <Heading as="h1" size="display-large">{data.title ?? 'No title found'}</Heading>
-            <Text as="p">{data.description ?? 'No description found'}</Text>
+            <Heading as='h1' size='display-large'>{data.title ?? 'No title found'}</Heading>
+            <Text as='p'>{data.description.value ?? 'No description found'}</Text>
         </Section>
     );
 }

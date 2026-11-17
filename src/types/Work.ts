@@ -1,6 +1,9 @@
 export type Work = {
     authors: [];
-    description: string;
+    description: {
+        type: string,
+        value: string
+    };
     key: string;
     title: string;
 }

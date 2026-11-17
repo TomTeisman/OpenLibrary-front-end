@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import type { SearchResponse } from '../../types/SearchResponse';
 
 import Text from '../elements/Text/Text';
 import Section from '../elements/Section/Section';
 import Heading from '../elements/Heading/Heading';
-import { Link } from 'react-router-dom';
 
 function SearchPage() {
     const [search, setSearch] = useState('');
