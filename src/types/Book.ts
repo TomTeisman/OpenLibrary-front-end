@@ -1,5 +1,5 @@
 export type Book = {
-    key?: string;
+    olid?: string;
     title?: string;
-    author_name?: object;
+    description?: object;
 };

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
-import type { SearchResponse } from '../../types/SearchResponse';
+import type { Book } from '../../types/Book';
 
 import Text from '../elements/Text/Text';
 import Section from '../elements/Section/Section';
@@ -10,7 +10,7 @@ import Heading from '../elements/Heading/Heading';
 function SearchPage() {
     const [search, setSearch] = useState('');
     const [warning, setWarning] = useState('');
-    const { data, loading, error, refetch } = useFetch<SearchResponse>(`http://localhost:8080/api/books/name/${search}`, false);
+    const { data, loading, error, refetch } = useFetch<Book[]>(`http://localhost:8080/api/books?search=${search}`, false);
 
     const updateQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value || '');
@@ -39,13 +39,13 @@ function SearchPage() {
 
             {loading ? <Text as="p" italic>{'Loading...'}</Text> :
                 <>
-                    {data && <Text as={'p'}>{data?.numFound} books found</Text>}
+                    {data && <Text as={"p"}>{data?.length} books found</Text>}
 
                     <br />
-                    
-                    {data && data.docs.map((d) => (
+
+                    {data && data.map((d) => (
                         d && <>
-                            <Link key={d?.key} to={`/books/${d.key?.split('/')[2]}`}>{d.title}</Link>
+                            <Link key={d.olid} to={`/books/${d.olid}`}>{d.title}</Link>
                             <br/>
                         </>
                     ))}

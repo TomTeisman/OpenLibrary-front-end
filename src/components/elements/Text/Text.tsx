@@ -7,8 +7,8 @@ type TextProps = {
     size?: 'body' | 'small';
     italic?: boolean;
     transform?: 'none' | 'uppercase' | 'lowercase';
-    children?: string | string[] | number;
-} & React.ComponentPropsWithoutRef<'p'>;
+    children?: React.ReactNode;
+} & React.HTMLAttributes<HTMLElement>;
 
 function Text({as = 'p', fontFamily = 'Inter', size = 'body', italic = false, transform = 'none', children}: TextProps) {
     const Tag = as;

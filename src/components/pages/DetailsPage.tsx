@@ -7,7 +7,7 @@ import Heading from '../elements/Heading/Heading';
 
 function DetailsPage() {
     const { id } = useParams();
-    const { data, loading, error } = useFetch<Work>(`http://localhost:8080/api/books/olid/${id}`);
+    const { data, loading, error } = useFetch<Work>(`http://localhost:8080/api/books/${id}`);
 
     if (loading) {return <Text as="p">Loading...</Text>;}
     if (error) {return <Text as='p'>Something went wrong.</Text>;}
